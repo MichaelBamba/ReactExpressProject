@@ -2,24 +2,24 @@ import React, { Component } from "react";
 
 class BlogPost extends Component {
   state = {
-    post: {},
+    blogposts: {},
   };
 
   async componentDidMount() {
     const post = await this.loadData();
+    console.log(post);
     this.setState({
-      post,
+      blogposts: post,
     });
   }
 
-  loadData = async () => {
-    const url = `http://localhost:3000/post`;
+  loadData = async (url) => {
     const response = await fetch(url);
-    const data = response.json();
+    const data = await response.json();
     return data;
   };
 
-  return() {
+  render() {
     const { blogposts } = this.state;
     return (
       <div>
