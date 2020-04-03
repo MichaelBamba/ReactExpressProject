@@ -19,7 +19,7 @@ class BlogPost extends Component {
     return data;
   };
 
-  render() {
+  return() {
     const { blogposts } = this.state;
     return (
       <div>
