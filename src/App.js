@@ -1,6 +1,6 @@
 import React from "react";
 import Home from "./components/homepage";
-import BlogPost from "./components/blogpost";
+import BlogPostList from "./components/blogpostList";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 
@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <Router>
         <Route path="/" exact component={Home} />
-        <Route path="/blogpost" component={BlogPost} />
+        <Route path="/blogpost" component={BlogPostList} />
       </Router>
     </div>
   );

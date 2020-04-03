@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 
-const BlogPost = props => {
+const BlogPost = (props) => {
+  const { blogposts } = props;
+
   return (
     <div>
-      <p>this is a moc blog post</p>
+      <p>{blogposts.author}</p>
+      <p> {blogposts.post} </p>
     </div>
   );
 };
